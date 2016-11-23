@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>PLATFORM DOCUMENTATION</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="PLATFORM DOCUMENTATION"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2015-11-24"/>
+<meta name="author" content="VLEAD"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript" src="./style/js/org-info.js">
+/**
+ *
+ * @source: ./style/js/org-info.js
+ *
+ * @licstart  The following is the entire license notice for the
+ *  JavaScript code in ./style/js/org-info.js.
+ *
+ * Copyright (C) 2012-2013  Sebastian Rose
+ *
+ *
+ * The JavaScript code in this tag is free software: you can
+ * redistribute it and/or modify it under the terms of the GNU
+ * General Public License (GNU GPL) as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option)
+ * any later version.  The code is distributed WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+ *
+ * As additional permission under GNU GPL version 3 section 7, you
+ * may distribute non-source (e.g., minimized or compacted) forms of
+ * that code without the copy of the GNU GPL normally required by
+ * section 4, provided you include this license notice and a URL
+ * through which recipients can access the Corresponding Source.
+ *
+ * @licend  The above is the entire license notice
+ * for the JavaScript code in ./style/js/org-info.js.
+ *
+ */
+</script>
+
+<script type="text/javascript">
+
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set("TOC_DEPTH", "1");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "1");
+org_html_manager.set("VIEW", "info");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">PLATFORM DOCUMENTATION</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Introduction</a></li>
+<li><a href="#sec-2">2 Motivation</a></li>
+<li><a href="#sec-3">3 LbD Platform</a></li>
+<li><a href="#sec-4">4 Resorces running on the servers:</a></li>
+<li><a href="#sec-5">5 Hosting process of the Platform</a></li>
+<li><a href="#sec-6">6 Location of the platform</a></li>
+<li><a href="#sec-7">7 Owner of lab repositories</a></li>
+<li><a href="#sec-8">8 Summary</a></li>
+<li><a href="#sec-9">9 Conclusion</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+
+
+<p>
+LbD project initiated by the Ministry of Human Resources and Development
+(MHRD). The objective of LbD  project is to content development for 17 courses
+in areas of CS and ECE. Currently there are around 11 courses have been
+developed in the Learning by Doing and Buftterfly Model. The integration
+process of LbD courses described here defines the development. It aims at
+delivering 17 courses in areas of CS and ECE.  Learning by Doing (LbD) based
+course content development in the areas of CS and ECE. Under LbD project
+developing 17 coures in LbD model.
+</p>
+<p>
+This document is driven by hosting the Lbd Project data. These details ensures a
+through hardware details of servers and that are running url
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Motivation</h2>
+<div class="outline-text-2" id="text-2">
+
+<p>Platform Document is driven by the platform details of the LbD courses content
+development Project which is initiated by Ministry of Human Resources and
+Development (MHRD).The process ensures the platform hardware details, location
+of the servers and total number of servers and also will give details that are 
+running on servers. A well-organised Quality Assurance process, involving defect identification,
+defect process of the hosting.The entire platform structure and hosting process.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> LbD Platform</h2>
+<div class="outline-text-2" id="text-3">
+
+<p>Lbd Project having 4 servers to host the content.
+</p><ul>
+<li>Production Server
+<ul>
+<li>Location: Server physically placed at "SERVER ROOM"
+       IIIT-Hyderabad main building. Below are the HardWare details of
+       the server. HP Server,running on this Ip Address- 10.4.8.51 <a href="#http-enhanceedu.iiit.ac.in">link</a>
+</li>
+<li>Hardware Details:
+
+<ul>
+<li>System model: HP proliant DL180 G5
+
+</li>
+<li>Processor: Intel® Xeon® cpu E5450 @ 3.00GHZ, 2992 Mhz, 4core(s)(Dual Processor)
+
+</li>
+<li>Installed physical memory(RAM): 8.00 GB
+
+</li>
+<li>With 2-NIC Card's (1Gigabit NIC each)
+
+</li>
+<li>HDD: 900GB (300GBx3 Hard plug drives) 
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+<li>IBM Server
+<ul>
+<li>Location:Servers physically located in the room number 326 at Nilgiri Block.
+</li>
+<li>Hardware Details:
+
+<ul>
+<li>IBM Server(Ip Address-10.4.20.76) 
+
+</li>
+<li>System Model : IBM X 3630 M4
+
+</li>
+<li>Processor :Intel Xeon E2420(six core)2.2ghz 15mb 1333MHZ
+
+</li>
+<li>Installed Physicall Memory ram:8GB
+
+</li>
+<li>HDD: 3TB(1TB x 3 Hard plug drive)
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+<li>Backup Servers
+<ul>
+<li>Location: Server are physically placed at "ROOM NO 326" IIIT-Hyderabad main building.  
+</li>
+<li>Hardware details:
+
+<ul>
+<li>HP Server (Ip Address-10.3.0.63 and 10.3.0.68)
+
+<ul>
+<li>System Model: HP Proliant ML 350 G6
+
+</li>
+<li>Processor :Intel(R) Xeon(R) CPU , E5520  @ 2.27GHz
+
+</li>
+<li>Installed Physical Memory(RAM):8GB
+
+</li>
+<li>HDD:2TB(500GB x 4 Hard Plug Drive)
+
+</li>
+</ul>
+
+</li>
+<li>HP Server (Ip Address-10.3.0.70 and 10.3.0.71)
+<ul>
+<li>System Model: HP Proliant ML 350 G6
+
+</li>
+<li>Processor :Intel(R) Xeon(R) CPU , E5520  @ 2.27GHz
+
+</li>
+<li>Installed Physical Memory(RAM):8GB
+
+</li>
+<li>HDD:2TB(500GB x 4 Hard Plug Drive)
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+<p>
+IBM server and raw videos back up is taken on server and Process document of previous employees are kept on server available on <a href="http://10.2.52.7/mhrd/">link</a>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Resorces running on the servers:</h2>
+<div class="outline-text-2" id="text-4">
+
+<ul>
+<li>All Enhanceedu website, Moodle, portal, wiki, SVN repos are running on HP
+  Server(Ip Address- 10.4.8.51, <a href="http://enhanceedu.iiit.ac.in">link</a>)
+</li>
+<li>Backup server is dedicated for videos and all videos are hosted on server and accessed by the  <a href="http://enhanceedu.iiit.ac.in/wiki/lbdvideos/">lbdvideocontent</a> on IBM
+ Server
+</li>
+<li>Data backup of production server FTP server is running on  machine and on  HP Server (Ip Address-10.2.52.2 and 10.2.52.4)
+</li>
+<li>All videos Back up hosted on HP Server (Ip Address-10.3.0.70 and 10.3.0.71) 
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Hosting process of the Platform</h2>
+<div class="outline-text-2" id="text-5">
+
+
+<p>
+Moodle Platform setup: In Moodle, after the data is reviewed and final version of the data from Wiki is uploaded to Moodle platform.
+</p>
+<p>
+Moodle Installation 
+</p>
+<p>
+download <a href="https://download.moodle.org/releases/latest/">Link</a> and untar the Moodle file
+tar -xvf moodle-latest-29.tgz
+access Moodle through the browser as shown in Figure below
+<img src="./images/fig1.png"  alt="./images/fig1.png" />
+</p>
+<p>
+Click Next then give the below details, As shown in Figure below
+Web Address         -  Default Web address 
+Moodle Directory - <i>var/www</i> html ( Default public folder )
+</p>
+<p>
+<img src="./images/fig2.png"  alt="./images/fig2.png" />
+</p>
+<p>
+Data Directory - /var/www/data1 ( Always place the data directory in /var/www, It stores all the data uploaded in Moodle)
+</p>
+<p>
+Give the below details, As shown in figure below
+</p>
+<p>
+Database Host – Localhost( Dont change the host, server is consider as localhost)
+Database Name – xyz
+Database User Name -   Database Admin user name 
+Database Password   -    Database Admin password 
+Database port and Socket are taken by default
+</p>
+<p>
+<img src="./images/fig3.png"  alt="./images/fig3.png" />
+</p>
+<p>
+Click next and Create a Admin user , As shown in Figure
+</p>
+<p>
+<img src="./images/fig4.png"  alt="./images/fig4.png" />
+</p>
+<p>
+Create a config.php file in Moodle copy the configuration given in Browser after creation of Account in Config.php file 
+</p>
+<p>
+Accounts Creation and Assigning of Course
+</p>
+
+<p>
+SiteAdministration&ndash;&gt;Users&ndash;&gt;Accounts&ndash;&gt;Add a NewUser
+</p>
+<p>
+Assigning a Course--
+</p>
+<p>
+Courses&ndash;&gt;Select a course in list &ndash;&gt;Course Administration &ndash;&gt;User&ndash;&gt;Enrolled
+User &ndash;&gt;Enroll Users
+</p>
+<p>
+<img src="./images/fig5.png"  alt="./images/fig5.png" />
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Location of the platform</h2>
+<div class="outline-text-2" id="text-6">
+
+<p>Production server physically located the server room, other 3 servers physically located in the room number 326 at Nilgiri Block.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Owner of lab repositories</h2>
+<div class="outline-text-2" id="text-7">
+
+
+<p>
+The ownership of the platform repositories would reside with the EnhanceEdu
+team. The platform maintaining by EnhanceEdu server admin.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Summary</h2>
+<div class="outline-text-2" id="text-8">
+
+<p>Platform document highlights the platform detail specifications of the
+LbD project. That are total 4 servers, their physical location,
+hardware details and platform setup process. Production server
+physically located the server room, other 3 servers physically located
+in the room number 326 at Nilgiri Block.
+</p></div>
+
+</div>
+
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Conclusion</h2>
+<div class="outline-text-2" id="text-9">
+
+<p>This document highlights the "platform" detail, specifications and the process
+of hosting. 
+</p></div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2015-11-24</p>
+<p class="author">Author: VLEAD</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

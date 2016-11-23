@@ -1,0 +1,11 @@
+#+TITLE: Sitemap for project org-docs
+
+   + courses
+     + [[file:courses/courses.org][LbD based Course Content Development in the areas of CS and ECE Documentation]]
+   + org-templates
+     + [[file:org-templates/level-0.org][level-0]]
+     + [[file:org-templates/level-1.org][level-1]]
+     + [[file:org-templates/level-2.org][level-2]]
+     + [[file:org-templates/level-3.org][level-3]]
+   + [[file:index.org][Documentation of LbD based course content development in the areas of CS and ECE Documentation]]
+   + [[file:platform.org][PLATFORM DOCUMENTATION of LbD Project]]

@@ -1,0 +1,160 @@
+#+TITLE: PLATFORM DOCUMENTATION
+#+AUTHOR: Balamma and Reena
+#+DATE: [2015-11-24 Tue]
+#+PROPERTY: results output
+#+PROPERTY: exports code
+#+SETUPFILE: ./org-templates/level-0.org
+#+options: ^:nil
+
+* Introduction
+
+LbD project initiated by the Ministry of Human Resources and Development
+(MHRD). The objective of LbD  project is to content development for 17 courses
+in areas of CS and ECE. Currently there are around 11 courses have been
+developed in the Learning by Doing and Buftterfly Model. The integration
+process of LbD courses described here defines the development. It aims at
+delivering 17 courses in areas of CS and ECE.  Learning by Doing (LbD) based
+course content development in the areas of CS and ECE. Under LbD project
+developing 17 coures in LbD model.
+
+This document is driven by hosting the Lbd Project data. These details ensures a
+through hardware details of servers and that are running url
+
+* Motivation
+Platform Document is driven by the platform details of the LbD courses content
+development Project which is initiated by Ministry of Human Resources and
+Development (MHRD).The process ensures the platform hardware details, location
+of the servers and total number of servers and also will give details that are 
+running on servers. A well-organised Quality Assurance process, involving defect identification,
+defect process of the hosting.The entire platform structure and hosting process.
+
+* LbD Platform 
+Lbd Project having 4 servers to host the content.
+ + Production Server
+     + Location: Server physically placed at "SERVER ROOM"
+       IIIT-Hyderabad main building. Below are the HardWare details of
+       the server. HP Server,running on this Ip Address- 10.4.8.51 [[
+        http://enhanceedu.iiit.ac.in][link]]
+     + Hardware Details:
+
+         + System model: HP proliant DL180 G5
+
+         + Processor: Intel® Xeon® cpu E5450 @ 3.00GHZ, 2992 Mhz, 4core(s)(Dual Processor)
+
+         + Installed physical memory(RAM): 8.00 GB
+
+         + With 2-NIC Card's (1Gigabit NIC each)
+
+         + HDD: 900GB (300GBx3 Hard plug drives) 
+
++ IBM Server
+     + Location:Servers physically located in the room number 326 at Nilgiri Block.
+     + Hardware Details:
+
+         + IBM Server(Ip Address-10.4.20.76) 
+ 
+         + System Model : IBM X 3630 M4
+
+         + Processor :Intel Xeon E2420(six core)2.2ghz 15mb 1333MHZ
+
+         + Installed Physicall Memory ram:8GB
+
+         + HDD: 3TB(1TB x 3 Hard plug drive)
+
++ Backup Servers
+     + Location: Server are physically placed at "ROOM NO 326" IIIT-Hyderabad main building.  
+     + Hardware details:
+
+         + HP Server (Ip Address-10.3.0.63 and 10.3.0.68)
+
+              + System Model: HP Proliant ML 350 G6
+
+              + Processor :Intel(R) Xeon(R) CPU , E5520  @ 2.27GHz
+
+              + Installed Physical Memory(RAM):8GB
+
+              + HDD:2TB(500GB x 4 Hard Plug Drive)
+
+         + HP Server (Ip Address-10.3.0.70 and 10.3.0.71)
+              + System Model: HP Proliant ML 350 G6
+
+              + Processor :Intel(R) Xeon(R) CPU , E5520  @ 2.27GHz
+
+              + Installed Physical Memory(RAM):8GB
+
+              + HDD:2TB(500GB x 4 Hard Plug Drive)
+
+IBM server and raw videos back up is taken on server and Process document of previous employees are kept on server available on [[http://10.2.52.7/mhrd/][link]]
+
+* Resorces running on the servers:
++ All Enhanceedu website, Moodle, portal, wiki, SVN repos are running on HP
+  Server(Ip Address- 10.4.8.51, [[http://enhanceedu.iiit.ac.in][link]])
++ Backup server is dedicated for videos and all videos are hosted on server and accessed by the  [[http://enhanceedu.iiit.ac.in/wiki/lbdvideos/][lbdvideocontent]] on IBM
+ Server
++ Data backup of production server FTP server is running on  machine and on  HP Server (Ip Address-10.2.52.2 and 10.2.52.4)
++ All videos Back up hosted on HP Server (Ip Address-10.3.0.70 and 10.3.0.71) 
+
+* Hosting process of the Platform
+
+Moodle Platform setup: In Moodle, after the data is reviewed and final version of the data from Wiki is uploaded to Moodle platform.
+
+Moodle Installation 
+
+download [[https://download.moodle.org/releases/latest/][Link]] and untar the Moodle file
+tar -xvf moodle-latest-29.tgz
+access Moodle through the browser as shown in Figure below
+[[./images/figure1.png]]
+
+Click Next then give the below details, As shown in Figure below
+Web Address         -  Default Web address 
+Moodle Directory - /var/www/ html ( Default public folder )
+
+[[./images/figure2.png]]
+
+Data Directory - /var/www/data1 ( Always place the data directory in /var/www, It stores all the data uploaded in Moodle)
+
+Give the below details, As shown in figure below
+
+Database Host – Localhost( Dont change the host, server is consider as localhost)
+Database Name – xyz
+Database User Name -   Database Admin user name 
+Database Password   -    Database Admin password 
+Database port and Socket are taken by default
+
+[[./images/figure3.png]]
+
+Click next and Create a Admin user , As shown in Figure
+
+[[./images/figure4.png]]
+
+Create a config.php file in Moodle copy the configuration given in Browser after creation of Account in Config.php file 
+
+Accounts Creation and Assigning of Course
+
+
+SiteAdministration-->Users-->Accounts-->Add a NewUser
+
+Assigning a Course--
+
+Courses-->Select a course in list -->Course Administration -->User-->Enrolled
+User -->Enroll Users
+
+[[./images/figure5.png]]
+
+* Location of the platform
+Production server physically located the server room, other 3 servers physically located in the room number 326 at Nilgiri Block.
+
+* Owner of lab repositories
+
+The ownership of the platform repositories would reside with the EnhanceEdu
+team. The platform maintaining by EnhanceEdu server admin.
+
+* Summary
+Platform document highlights the platform detail specifications of the
+LbD project. That are total 4 servers, their physical location,
+hardware details and platform setup process. Production server
+physically located the server room, other 3 servers physically located
+in the room number 326 at Nilgiri Block.
+* Conclusion 
+This document highlights the "platform" detail, specifications and the process
+of hosting. 

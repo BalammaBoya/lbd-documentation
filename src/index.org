@@ -1,0 +1,10 @@
+#+TITLE:Documentation of LbD based course content development in the areas of CS and ECE Documentation
+#+AUTHOR: Balamma & Reena
+#+DATE: [2015-11-24 Tue]
+#+PROPERTY: results output
+#+PROPERTY: exports code
+#+SETUPFILE: ./org-templates/level-0.org
+#+options: ^:nil
+
+1. [[./courses.org][Courses]]
+2. [[./platform.org][Platform]]

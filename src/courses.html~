@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>LbD based course content development in the areas of CS and ECE Documentation</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="LbD based course content development in the areas of CS and ECE Documentation"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2015-11-24"/>
+<meta name="author" content="VLEAD"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript" src="./style/js/org-info.js">
+/**
+ *
+ * @source: ./style/js/org-info.js
+ *
+ * @licstart  The following is the entire license notice for the
+ *  JavaScript code in ./style/js/org-info.js.
+ *
+ * Copyright (C) 2012-2013  Sebastian Rose
+ *
+ *
+ * The JavaScript code in this tag is free software: you can
+ * redistribute it and/or modify it under the terms of the GNU
+ * General Public License (GNU GPL) as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option)
+ * any later version.  The code is distributed WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+ *
+ * As additional permission under GNU GPL version 3 section 7, you
+ * may distribute non-source (e.g., minimized or compacted) forms of
+ * that code without the copy of the GNU GPL normally required by
+ * section 4, provided you include this license notice and a URL
+ * through which recipients can access the Corresponding Source.
+ *
+ * @licend  The above is the entire license notice
+ * for the JavaScript code in ./style/js/org-info.js.
+ *
+ */
+</script>
+
+<script type="text/javascript">
+
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set("TOC_DEPTH", "1");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "1");
+org_html_manager.set("VIEW", "info");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">LbD based course content development in the areas of CS and ECE Documentation</h1>
+
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Introduction</a>
+<ul>
+<li><a href="#sec-1-1">1.1 General Information</a></li>
+<li><a href="#sec-1-2">1.2 Project Overview</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 Motivation</a></li>
+<li><a href="#sec-3">3 Development Process of courses</a>
+<ul>
+<li><a href="#sec-3-1">3.1 About The Butterfly Model</a>
+<ul>
+<li><a href="#sec-3-1-1">3.1.1 Learning objectives:</a></li>
+<li><a href="#sec-3-1-2">3.1.2 Implementation:</a></li>
+<li><a href="#sec-3-1-3">3.1.3 Concepts:</a></li>
+<li><a href="#sec-3-1-4">3.1.4 Resources:</a></li>
+<li><a href="#sec-3-1-5">3.1.5 Illustration:</a></li>
+<li><a href="#sec-3-1-6">3.1.6 Playground:</a></li>
+<li><a href="#sec-3-1-7">3.1.7 Analysis:</a></li>
+<li><a href="#sec-3-1-8">3.1.8 Insights:</a></li>
+<li><a href="#sec-3-1-9">3.1.9 Imagination:</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-2">3.2 List of the courses</a></li>
+<li><a href="#sec-3-3">3.3 Authorization of the course:</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 Location of lab repositories</a></li>
+<li><a href="#sec-5">5 Owner of Course repositories</a></li>
+<li><a href="#sec-6">6 Development of courses repositories</a></li>
+<li><a href="#sec-7">7 Hosting process of labs</a>
+<ul>
+<li>
+<ul>
+<li><a href="#sec-7-1">7.1 Updating in Existing courses</a></li>
+<li><a href="#sec-7-2">7.2 Edit</a></li>
+<li><a href="#sec-7-3">7.3 Adding a Module for Existing course</a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-8">8 Summary</a></li>
+<li><a href="#sec-9">9 Conclusion</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> General Information</h3>
+<div class="outline-text-3" id="text-1-1">
+
+<p>Project Title: Learning by Doing (LbD) based course content development for 17 courses in areas of CS and ECE
+</p>
+<p>
+ LbD project initiated by the Ministry of Human Resources and Development (MHRD). The objective of this project is to
+content development for 17 courses in areas of CS and ECE. Currently there
+ are around 11 courses  have been developed in the Learning by Doing and  Buftterfly Model. 
+ The integration process of LbD courses described here defines
+ the development. It aims at delivering 17 courses in areas of CS and ECE.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Project Overview</h3>
+<div class="outline-text-3" id="text-1-2">
+
+<p>It is natural for one to be more interested if one is involved in what
+one does. This project aims to develop digital content in the CS and
+ECE field using the Learning by Doing (LBD) methodology. The student
+will in turn be able to learn, appreciate and apply the concepts
+learnt in a class by applying them in real life.  In this approach
+each course is divided into tasks (tasks cover select topics). All the
+tasks are interrelated and the whole may sum up to a project which the
+student submits as a final work product. The student approaches the
+tasks by going through resources that are provided. These resources
+can be digital lectures, PPTs or Just in Time (JIT) lectures/notes. At
+times a step by step approach is provided for each task to aid the
+student while doing the task. Also, some tasks are related in such a
+way that without completing the previous task the next task cannot be
+attempted. This will lay the emphasis on the student to do the tasks.
+Doing the tasks will necessitate student involvement and thus the
+student will be able to understand the concepts better by applying
+them to a real world problem. Thus, this project is expected to have
+considerable influence on the students’ learning and retention rates,
+thereby increasing the quality of the student community as such.  The
+scope of the project is not limited to the core topics of the standard
+CS and ECE curriculum but also to the advanced and synergetic courses
+in the CS and ECE curriculum.
+</p>
+
+<p>
+About LbD Methodology: The LbD methodology is built on the
+constructionist approach and promotes a learner oriented learning
+environment. It fosters skill development and the learning of factual
+information through hands-on implementation of the associated
+concepts. It thus sensitizes people to the use of the knowledge rather
+than acquiring knowledge for its own sake. In this methodology,
+mentors assist the students in their course work by "providing hints
+and not solutions".Unlike the conventional (classroom) mode of
+teaching, the student to teacher ratio in this model is low, which
+allows for personalized mentoring and growth of the student.  In this
+learning model, lesson/unit goals and expectations are set at the
+beginning, so learners understand what they are trying to achieve and
+the expected level of that achievement. Learners discuss multiple
+strategies of solving the problems with the mentor, allowing the
+learners to understand the various ways in which they can solve the
+problems that they encounter. Feedback is given by the mentors during
+learner interactions (through presentations and discussions) which
+allows the learners to revise their projects/artifacts. Also, an
+involvement with applications in the real world allows the learning
+process to take place in a more meaningful context.
+</p>
+
+<p>
+Learning by Doing methodology students can learn their own with real time
+examples. Student will get hands on experience while taking the course.
+By LbD project student can  attain practical knowledge project centered
+curriculum. Learn to solve real world problems. Adapt to ever changing
+technologies. eg. I hear, I forget : I see, I remember: I do, I understand
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Motivation</h2>
+<div class="outline-text-2" id="text-2">
+
+
+<p>
+This document is driven by the commitment of delivering 17 courses which can be accomplished by following an efficient integration
+process. This process ensures a thorough developing content of all 17 courses
+ before they get upload on portal and made availabe to the end
+ users. A well-organised Quality Assurance process, involving defect identification, defect reporting
+ and defect fixing, defined in this document would ensure high quality
+ labs. The entire workflow starting
+from the development to the integration of a lab is detailed in the followings sections.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Development Process of courses</h2>
+<div class="outline-text-2" id="text-3">
+
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> About The Butterfly Model</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<p>The basis of the model Butterflies symbolize change. In ancient mythology, the
+butterfly was a symbol of wisdom and everlasting knowledge. Our model's
+blending of the different learning styles of the learners and their higher
+order thinking skills makes us believe that this model will result in a
+metamorphosis in the way students learn. Since the basis of the Butterfly model
+is the learning by doing methodology the focus is on doing "tasks" and showing
+work output. We have identified and designed various components that would help
+the student in the learning process.
+</p>
+<p>
+Mapping to the model We have designed 9 components in this model. Each of these
+can be mapped to the butterfly anatomy. 
+</p>
+<p>
+Learning objectives prepare the butterfly for its flight by making it think "why it is flying and where it is flying" similar to the student thinking "why he/she is learning the course".
+Implementation: It is known that the thorax or the body of the butterfly helps in its flight. Similarly, the implementation component has the tasks that the student works on and forms the main structure around which the rest of the flight is built. 
+Resources: These are available at the antennae of the butterfly and help in sensing the butterfly's direction, guiding it to its intended destination. Our model provides assistance that is tailored to the level of progress being made by the learner, thus guiding the learner toward the final destination. The key is that help is not thrown at the learner indiscriminately, but is provided on an as-needed basis. The hind- wings and the fore-wings help the butterfly in its flight and play a critical role. 
+</p>
+<p>
+In our model, Concepts &amp; Analysis components act as fore-wings and Playground &amp; Imagination act as hindwings.
+At the intersection of these wings are Illustration &amp; Insights.
+</p>
+<p>
+A novice learner may start with the learning objectives, proceed to the implementation component, and navigate in
+the left section of the butterfly. An advanced learner may begin navigating in the right section of the butterfly and get
+more insights into the subject. An intermediate learner navigates in both the left and right sections of the butterfly
+and accesses components. 
+</p>
+<p>
+Thus, once a student completes a module in this model he/she will be able to fly comfortably and also let their
+imagination take flight. 
+</p>
+<p>
+Each of the components of the model will now be described in greater detail. Though there is no strict order in which
+these components should be accessed, we suggest the following order: learning objectives, implementation,
+concepts, illustration, playground, resources, analysis, imagination and insights.
+</p>
+<p>
+<img src="./images1/Butterfly.png"  alt="./images1/Butterfly.png" />
+</p>
+
+</div>
+
+<div id="outline-container-3-1-1" class="outline-4">
+<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> Learning objectives:</h4>
+<div class="outline-text-4" id="text-3-1-1">
+
+<p>The "Learning Objectives" put together form the concepts the courses covers.
+In general, learning objectives are introduced at the start of the course so that learners understand what they are trying
+to achieve and the level of the achievement. This allows students to participate as active, independent learners as
+they are clearly told what they should be able to do at the end of the course. Thus, learning objectives put the focus on
+the learner and learning rather than the teacher and the teaching.
+</p>
+<p>
+How will learning objectives help?
+Taxonomies can be useful in getting ideas for the types of learning objectives to consider and in checking the
+completeness of a set of objectives. One example is Bloom's taxonomy, in which general concepts and specific skills are 
+</p>
+<p>
+introduced in the beginning. The ability of students to recall information and understand its meaning is
+then verified. An explanation on how the concepts and skills are related to each other follows, which bridges the abstract
+with the concrete. Finally, the ability of students in applying the knowledge to real-life scenarios, breaking down the
+information into component parts, applying the knowledge in new domains, and judging the value of the information
+are assessed.
+</p>
+<p>
+Given the fact that the employability level of our graduates is very low, our primary focus in this effort has been on
+improving their skills and thinking abilities. We ensured that the learning objectives chosen by us touched on the
+higher order thinking skills mentioned in Bloom's taxonomy. Moreover, the learning objectives are mapped to the
+assessments that we conduct during and at the end of the course. Such a mapping also makes both our assessment of
+student performance and student self-assessment easier as students can assess their own progress and concentrate on
+their weaker skills. This is especially important for professional students who are looking to gain specific skills
+and knowledge. Once the learning objectives are set, the students move on to the implementation part.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-1-2" class="outline-4">
+<h4 id="sec-3-1-2"><span class="section-number-4">3.1.2</span> Implementation:</h4>
+<div class="outline-text-4" id="text-3-1-2">
+
+<p>The "Implementation" Involves tasks when completed lead to prototypes of basics products in the area.
+The implementation involves tasks which when completed lead to prototypes of basic products in the area. According
+to Piaget, "a sufficient experimental training was believed to have been provided as long as the student had been
+introduced to the results of past experiments or had been allowed to watch demonstration experiments conducted by
+his teacher, as though it were possible to sit in rows on a wharf and learn to swim merely by watching grown-up
+swimmers in the water. It is true that this form of instruction by lecture and demonstration has often been supplemented
+by laboratory work by the students, but the repetition of past experiments is still a long way from being the best way of
+exciting the spirit of invention, and even of training students in the necessity for checking for verification".
+</p>
+<p>
+Research has confirmed many of the seemingly intuitive benefits of hands-on learning and has also documented a
+variety of unanticipated benefits. An often quoted Chinese proverb "I hear and I forget; I see and I remember; I do and
+I understand" succinctly puts our point across. Without hands-on learning students rely for the most part of their
+learning on memory and abstract thought, two methods which restrict learning in most students. By actually doing
+and experiencing, students develop their critical thinking skills as well as discover scientific concepts. This self
+discovery stays with students throughout their lifetime while memory fades. Moreover, hands on exercises force students
+to think by requiring interpretation of the observed events, rather than memorization of correct responses. Therefore,
+the justification for hands-on learning is that it allows students to build understanding that is functional and to
+develop the ability to inquire on their own, in other words, to become independent learners. In this section, the emphasis is 
+on application. The next section i.e. concepts as the name suggests covers all the concepts in the module. This section 
+actually gives the student enough knowledge about the module.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-1-3" class="outline-4">
+<h4 id="sec-3-1-3"><span class="section-number-4">3.1.3</span> Concepts:</h4>
+<div class="outline-text-4" id="text-3-1-3">
+
+<p>The "Concepts" when concatenated form a lecture-based course.
+These refer to the reading material that the students refer to for doing the tasks. These concepts are provided by the
+domain expert in the form of video lectures (also called spoken tutorials). Thus, the individual concepts when 
+concatenated form a lecture-based course. Students can refer to the resources section for further information on the
+related concept.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-1-4" class="outline-4">
+<h4 id="sec-3-1-4"><span class="section-number-4">3.1.4</span> Resources:</h4>
+<div class="outline-text-4" id="text-3-1-4">
+
+<p>The "resources" form a collection of various multi-model resources including the breakthrough papers in the area.
+These include additional material that will be useful for the student. These include presentations, videos, external links,
+and prescribed books for reference. Considering the different learning styles of the students we have designed
+resources in various formats (text, audio, and video). These resources when concatenated form a collection of various
+multi-modal resources including the breakthrough papers in the area. Research has shown that learning is more when information is presented via computer animation systems than through traditional classroom lectures. Using an interactive animation will solve the problem of the imagination-skill in education and training. Therefore, the ability to practice new concepts in a risk-free environment improves learners' skills and abilities. The next two sections pertain to "Illustrations" and "Playground" through animations and a virtual learning environment. The first of these, the "Illustration" section, comprises of explanation of the concepts via illustration of a concept generally through animation/simulation. The second, the "Playground" section, provides the user with a virtual lab to try out the "experiment". We will now discuss in detail about each section and also bring out the importance of using animations/simulations in the butterfly model.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-1-5" class="outline-4">
+<h4 id="sec-3-1-5"><span class="section-number-4">3.1.5</span> Illustration:</h4>
+<div class="outline-text-4" id="text-3-1-5">
+
+<p>The "Illustration" form an (animated e-workbook with solved examples.
+The importance of illustrations is well understood in learning. Illustrations may be static, i.e., text book examples that elucidate the concept without learner interaction. However, an illustration that allows the learner to try out possibilities - interactive illustration through whatif examples, help learning happen better. Further, benefits of employing animations/simulations in education have been widely discussed. Agina has explained the benefits of using animation in education and training namely skill and ability improvement, interactivity, and engagement. The main advantage of employing animations in education is to show the "non-possible" in real-life learning possible. Learners have more interaction with the content and are thus more likely to assimilate the knowledge, skills and concepts involved. More importantly, this approach appeals to different learning styles, allowing personalization possibilities to learning.
+</p>
+<p>
+In this section, the instructor explains a particular concept through animations, which may be static or interactive
+illustrations.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-1-6" class="outline-4">
+<h4 id="sec-3-1-6"><span class="section-number-4">3.1.6</span> Playground:</h4>
+<div class="outline-text-4" id="text-3-1-6">
+
+<p>The "playground" forms a virtual workshop for the courses
+</p>
+<p>
+Interactive learning with live-action animation, simulation,video, audio, graphics, feedback, expert advice, and questions and answers keeps learners interested and reinforces skills. Because it is exciting, challenging, and fun to use, it encourages learners to return to the program again and again! Through continual practice, learning is absorbed and integrated into daily performance. Moreover animations allow for flexible education and training and ultimately inspire learners to learn more. Through interactive and what-if simulations, students take less time to learn complex things. This can be attributed to the fact that there is more student involvement in this process.
+</p>
+<p>
+It is important to mention that computer animation also improves the skills and ability of instructors because they
+will be able to improve and enhance their way of teaching. During the process of the animation, instructors can open
+free-discussion among learners, which will positively affect the entire classroom. It is important to note that the learners'
+feedback could be useful to improve the animation/simulation system itself! Animation of the student can be working by himself/herself. So the student is empowered to try out new things and learn by himself/herself.
+</p>
+<p>
+Simply put, the collection of different "playground" sections forms a virtual workshop for the course.
+The next three components are designed keeping in mind  the advanced (read research-oriented student). Primarily our
+focus over here is to make the student think further and explore beyond the said 
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-1-7" class="outline-4">
+<h4 id="sec-3-1-7"><span class="section-number-4">3.1.7</span> Analysis:</h4>
+<div class="outline-text-4" id="text-3-1-7">
+
+<p>The "Analysis" forms detailed versions of the "truths" in the courses (like mathematical proofs).
+To be concise, this section forms detailed versions of the truths in the course (like mathematical proofs). The student
+is explained how the concept is reached at through the proofs.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-1-8" class="outline-4">
+<h4 id="sec-3-1-8"><span class="section-number-4">3.1.8</span> Insights:</h4>
+<div class="outline-text-4" id="text-3-1-8">
+
+<p>The "Insights" trace the literature's evolution leading to the entire course.
+Insights can be classified as historical insights which trace to the literature's evolution leading to the entire course. In
+addition, questions posed here could help in learners getting altogether new insights.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-1-9" class="outline-4">
+<h4 id="sec-3-1-9"><span class="section-number-4">3.1.9</span> Imagination:</h4>
+<div class="outline-text-4" id="text-3-1-9">
+
+<p>"Imagination" is about the research idea "explosion" aftermath of the
+conception courses.  The imagination is about the research/idea "explosion"
+aftermath of the course/concept. This section leaves the student thinking on
+what's next and can be considered a precursor to the next module. The content
+thus developed in this model, will cater to a wide range of students ranging
+from the novice to the advanced.
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> List of the courses</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<p>The following courses are designed LbD using butterfly model.
+Delivered 11 courses out of 17 to MHRD to host on e-Acharya portal which is initiated
+by MHRD as listed below and remaining 6 courses are under development.
+</p>
+<ul>
+<li>Submitted courses list:
+
+<ol>
+<li><a href="http://enhanceedu.iiit.ac.in/moodle/course/view.php?id=46">Social Networking</a> 
+</li>
+<li><a href="http://enhanceedu.iiit.ac.in/moodle/course/view.php?id=44">Advanced Topics in Text and Web Mining</a>
+</li>
+<li><a href="http://enhanceedu.iiit.ac.in/moodle/course/view.php?id=27">Operating Systems</a>
+</li>
+<li><a href="http://enhanceedu.iiit.ac.in/moodle/course/view.php?id=31">Solid State Electronic Devices</a>
+</li>
+<li><a href="http://enhanceedu.iiit.ac.in/moodle/course/view.php?id=37">Algorithms</a>
+</li>
+<li><a href="http://enhanceedu.iiit.ac.in/moodle/course/view.php?id=34">Embedded Systems</a>
+</li>
+<li><a href="http://enhanceedu.iiit.ac.in/moodle/course/view.php?id=33">Digital Systems Design using Verilog</a>
+</li>
+<li><a href="http://enhanceedu.iiit.ac.in/moodle/course/view.php?id=32">Data Mining and Data Warehousing</a>
+</li>
+<li><a href="http://enhanceedu.iiit.ac.in/moodle/course/view.php?id=30">Introduction to e-Governance</a>
+</li>
+<li><a href="http://enhanceedu.iiit.ac.in/moodle/course/view.php?id=39">Digital Logic Design</a>
+</li>
+<li><a href="http://enhanceedu.iiit.ac.in/moodle/course/view.php?id=41">Analog Design</a>
+</li>
+</ol>
+
+</li>
+</ul>
+
+
+
+<ul>
+<li>Working in progress courses list:
+
+<ol>
+<li><a href="http://enhanceedu.iiit.ac.in/wiki/index.php/LBD_Courses/EMT">Electro Magnetic Theory</a>
+</li>
+<li><a href="http://enhanceedu.iiit.ac.in/wiki/index.php/LBD_Courses/VLSI">VLSI</a>
+</li>
+<li><a href="http://enhanceedu.iiit.ac.in/moodle/course/view.php?id=42">Visual Java Development Environment</a>
+</li>
+<li><a href="http://enhanceedu.iiit.ac.in/wiki/index.php/LBD_Courses/CAD_VLSI">CAD for VLSI</a>
+</li>
+<li><a href="http://enhanceedu.iiit.ac.in/wiki/index.php/LBD_Courses/Topics_in_Embedded_Systems_Intro">Topics in Embedded Systems</a>
+</li>
+<li><a href="http://enhanceedu.iiit.ac.in/wiki/index.php/LBD_Courses/VLSI_Architectures">VLSi Architectures</a>
+</li>
+</ol>
+
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Authorization of the course:</h3>
+<div class="outline-text-3" id="text-3-3">
+
+
+<p>
+Courses development was done on <a href="http://enhanceedu.iiit.ac.in/wiki">wiki</a> and running on <a href="http://enhanceedu.iiit.ac.in/moodle/">moodle</a> platform.
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Location of lab repositories</h2>
+<div class="outline-text-2" id="text-4">
+
+<p>All 'LbD Course' are sources are stored as a <a href="http://enhanceedu.iiit.ac.in/wiki/">wiki</a> - 'LbD Courses', which is maintained by
+EnhanceEdu.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Owner of Course repositories</h2>
+<div class="outline-text-2" id="text-5">
+
+<p>The ownership of the lab repositories would reside with the EnhanceEdu team. The discretion of including new features contributed by
+Professors  RA's and EnhanceEdu team.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Development of courses repositories</h2>
+<div class="outline-text-2" id="text-6">
+
+<p>All changes and new feature developments should happen only on the
+wiki. 
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Hosting process of labs</h2>
+<div class="outline-text-2" id="text-7">
+
+<p>Process of porting courses on the platform:
+</p>
+<p>
+<a href="http://enhanceedu.iiit.ac.in/moodle/">Portal Link</a>
+</p>
+<p>
+STEP1: Click on Login
+</p>
+<p>
+<img src="./images/fig1.jpg"  alt="./images/fig1.jpg" />
+</p>
+<p>
+STEP2: User Credentials
+</p>
+<p>
+User - balamma
+</p>
+<p>
+Password - Balamma@123
+</p>
+<p>
+Enter username and password 
+</p>
+<p>
+<img src="./images/fig2.jpg"  alt="./images/fig2.jpg" />
+</p>
+<p>
+STEP3: After Login, you can see below window
+</p>
+<p>
+<img src="./images/fig3.jpg"  alt="./images/fig3.jpg" />
+</p>
+<p>
+STEP4: Click on Courses, 
+</p>
+<p>
+<img src="./images/fig4.jpg"  alt="./images/fig4.jpg" />
+</p>
+<p>
+STEP5: Click on concerned course link
+</p>
+<p>
+<img src="./images/fig5.jpg"  alt="./images/fig5.jpg" />
+</p>
+<p>
+STEP6: Click on Turn editing on
+</p>
+
+</div>
+
+<div id="outline-container-7-1" class="outline-4">
+<h4 id="sec-7-1"><span class="section-number-4">7.1</span> Updating in Existing courses</h4>
+<div class="outline-text-4" id="text-7-1">
+
+
+<p>
+<img src="./images1/fig6.jpg"  alt="./images1/fig6.jpg" />
+</p>
+<p>
+Click on respective button like Buttefly/Feedback form / quiz 
+</p>
+<p>
+<img src="./images1/fig7.jpg"  alt="./images1/fig7.jpg" />
+</p>
+<p>
+Click on respective button like Buttefly/Feedback form / quiz
+</p>
+<p>
+<img src="./images1/fig8.jpg"  alt="./images1/fig8.jpg" />
+</p>
+<p>
+Butterfly model content update
+</p>
+<p>
+<img src="./images1/fig9.jpg"  alt="./images1/fig9.jpg" />
+</p>
+<p>
+Here + symbol for adding a new page and pencil symbol for Editing page content
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-7-2" class="outline-4">
+<h4 id="sec-7-2"><span class="section-number-4">7.2</span> Edit</h4>
+<div class="outline-text-4" id="text-7-2">
+
+
+<p>
+<img src="./images1/fig10.jpg"  alt="./images1/fig10.jpg" />
+</p>
+<p>
+Chapter title and content can be edited from here.  Paste content from wiki to here
+HTML code can be enabled here by clicking this icon (Enable html code for
+animations only )
+</p>
+<p>
+<img src="./images1/fig11.jpg"  alt="./images1/fig11.jpg" />
+</p>
+
+
+
+<pre class="example">Sample html code for animations 
+&lt;a href="http://enhanceedu.iiit.ac.in/animation/OS/Module1.swf?d=650x650"&gt;
+DSD Module 1 Animation&lt;/a&gt; 
+Paste above code in html for playground/Illustration and change flash file name/path as per your requirement.
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-7-3" class="outline-4">
+<h4 id="sec-7-3"><span class="section-number-4">7.3</span> Adding a Module for Existing course</h4>
+<div class="outline-text-4" id="text-7-3">
+
+<p>At the end of the each section you can find Add Section button for adding a new
+module
+</p>
+<p>
+<img src="./images1/fig12.jpg"  alt="./images1/fig12.jpg" />
+</p>
+<p>
+<img src="./images1/fig13.jpg"  alt="./images1/fig13.jpg" />
+</p>
+<p>
+Add section name and summary and press save button.
+After that you can click Add resource button for butterfly model
+</p>
+<p>
+<img src="./images1/fig14.jpg"  alt="./images1/fig14.jpg" />
+</p>
+<p>
+<img src="./images1/fig15.jpg"  alt="./images1/fig15.jpg" />
+</p>
+<p>
+Add Name and Description here and click on save and return to course button
+</p>
+<p>
+<img src="./images1/fig16.jpg"  alt="./images1/fig16.jpg" />
+</p>
+<p>
+Click on butterfly link and add new page in book module (butterfly model)
+</p>
+<p>
+<img src="./images1/fig17.jpg"  alt="./images1/fig17.jpg" />
+</p>
+<p>
+Click on save changes. 
+Adding a new page Click on + icon on exiting page
+</p>
+<p>
+<img src="./images1/fig18.jpg"  alt="./images1/fig18.jpg" />
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Summary</h2>
+<div class="outline-text-2" id="text-8">
+
+<p>Learning by Doing (LbD) based course content development in the areas of CS and
+ECE. Under this project developing 17 coures in LbD model.This content designed
+with "Butterfly Model". Butterfly Model having different components. i.e
+Learning Objectives, Concepts, Illustration, Playground, Resources,
+Implementation, Insights, Analysis and Imagination.11 courses are submitted,
+remaining 6 courses are under development. All these courses are running on  moodle
+platform. 
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Conclusion</h2>
+<div class="outline-text-2" id="text-9">
+
+<p>This document highlights the  "Lbd and Butterfly Model" detail specifications
+and the process of porting courses in moodle.
+</p></div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2015-11-24</p>
+<p class="author">Author: VLEAD</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
